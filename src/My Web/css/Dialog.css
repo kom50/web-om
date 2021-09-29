@@ -1,0 +1,27 @@
+.card {
+    width: 80%;
+    height: 100%;
+    background-color: rgb(248, 63, 239);
+    background-color: var(--bs-light);
+    background-color: var(--bs-white);
+    /*  */
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.card_header,
+.card_footer {
+    color: color;
+    height: 60px;
+    width: 100%;
+    background-color: var(--bs-info);
+    box-shadow: 3px 3px 10px rgb(207, 199, 199);
+}
+
+.card_footer {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--bs-light);
+}
