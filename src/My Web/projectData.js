@@ -5,7 +5,8 @@ const projectDetails = [
 		source_code_link: 'https://github.com/kom50/music-player1.github-io',
 		description:
 			'This is simple Music Player App and this project is created with the help of HTML, CSS and JavaScript.',
-		features: [],
+		tech_stuff: ['HTML', 'CSS', 'JavaScript'],
+		features: ['Sleep Mode', 'Playlist viewer', ''],
 	},
 	{
 		title: 'Snake Game in HTML',
@@ -13,33 +14,34 @@ const projectDetails = [
 		source_code_link: 'https://github.com/kom50/snakegame.github.io',
 		description:
 			'This project is created with the help of HTML, SVG, CSS and JavaScript.',
-		features: [],
+		tech_stuff: ['HTML', 'SVG', 'CSS', 'JavaScript'],
+		features: ['With Speed control'],
 	},
 	{
 		title: 'Photo Puzzle Game in HTML',
-		source_code_link:
-			'https://github.com/kom50/Photo-puzzle-game.github.io',
+		source_code_link: 'https://github.com/kom50/Photo-puzzle-game.github.io',
 		live_link: 'https://kom50.github.io/Photo-puzzle-game.github.io/',
 		description:
 			'This project is created with the help of HTML, CSS and JavaScript.',
+		tech_stuff: ['HTML', 'CSS', 'JavaScript'],
 		features: [],
 	},
 	{
 		title: 'Number Puzzle Game in HTML',
-		source_code_link:
-			'https://github.com/kom50/Photo-puzzle-game.github.io',
-		live_link: 'https://kom50.github.io/Photo-puzzle-game.github.io/',
+		source_code_link: 'https://github.com/kom50/number-puzzle.github.io',
+		live_link: ' https://kom50.github.io/number-puzzle.github.io/',
 		description:
 			'This project is created with the help of HTML, CSS and JavaScript.',
-		features: [],
+		tech_stuff: ['HTML', 'CSS', 'JavaScript'],
+		features: ['Infinite Level'],
 	},
 	{
 		title: 'Tic Tac Toe Game in HTML',
 		live_link: ' https://kom50.github.io/Photo-puzzle-game.github.io/',
-		source_code_link:
-			'https://github.com/kom50/Photo-puzzle-game.github.io',
+		source_code_link: 'https://github.com/kom50/Photo-puzzle-game.github.io',
 		description:
 			'This project is created with the help of HTML, CSS and JavaScript.',
+		tech_stuff: ['HTML', 'CSS', 'JavaScript'],
 		features: ['Play with Computer', 'Play with Friends'],
 	},
 	{
@@ -48,23 +50,53 @@ const projectDetails = [
 		source_code_link: 'hhttps://github.com/kom50/covid19App.github.io',
 		description:
 			'This Project is create with the help of HTML, CSS and JavaScript.',
-		features: [],
-	},
-	{
-		title: 'Number Puzzle in HTML',
-		live_link: 'Not available',
-		source_code_link: 'Not available',
-		description:
-			'This project is created with the help of HTML, CSS, JavaScript.',
-		features: [],
+		tech_stuff: ['HTML', 'CSS', 'JavaScript', 'jQuery'],
+		features: ['Show Covid 19 cases using country name'],
 	},
 	{
 		title: 'Calculator in React Js',
-		live_link: 'https://formdata-6edb0.web.app/',
-		source_code_link: 'https://github.com/kom50/Calculator-in-React',
+		live_link: 'https://kom50.github.io/Calculator-in-React/',
+		source_code_link:
+			'https://github.com/kom50/Calculator-in-React/tree/master',
 		description:
 			'This Project is created with the help of HTML, CSS and React Js.',
+		tech_stuff: ['HTML', 'CSS', 'React JS'],
 		features: [],
+	},
+	{
+		title: 'Todo List in React Js',
+		live_link: 'https://kom50.github.io/TodoApp/',
+		source_code_link: 'https://github.com/kom50/TodoApp',
+		description:
+			'This Project is created with the help of HTML, CSS and React Js.',
+		tech_stuff: ['HTML', 'CSS', 'React JS'],
+		features: [],
+	},
+	{
+		title: 'Portfolio website in React Js',
+		live_link: 'https://my-web-om.web.app/',
+		source_code_link: 'https://github.com/kom50/web-om',
+		description:
+			'This Project is created with the help of HTML, CSS and React Js.',
+		tech_stuff: ['HTML', 'CSS', 'React JS'],
+		features: [],
+	},
+	{
+		title: 'Social Diary in React Js',
+		live_link: 'https://social-diary-79403.web.app/',
+		source_code_link: 'https://github.com/kom50/social-diary-in-react-js',
+		description:
+			'This Project is created with the help of HTML, CSS and React Js.',
+		tech_stuff: ['HTML', 'CSS', 'React JS', 'Axios', 'Firebase'],
+		features: [
+			'Create Account',
+			'Login features',
+			'Share your story with others',
+			'Create story',
+			'Read story',
+			'Update story',
+			'Delete story',
+		],
 	},
 	{
 		title: 'Notepad Application in Java',
@@ -72,24 +104,33 @@ const projectDetails = [
 		source_code_link: 'https://github.com/kom50/Notepad-Project-in-Java',
 		description:
 			'This Application is same as MS Notepad. This project is created with the help of Java Swing and AWT.',
-		features: [],
+		tech_stuff: ['Java', 'AWT', 'Swing'],
+		features: ['Create a Simple text file'],
 	},
 	{
 		title: 'Snake Game in Java',
 		live_link: 'Not available',
 		source_code_link:
 			'https://github.com/kom50/Snake-game-in-java/tree/main/Snake%20Game%20Project',
-		description:
-			'This project is created with the help of Java swing and AWT.',
-		features: [],
+		description: 'This project is created with the help of Java swing and AWT',
+		tech_stuff: ['Java', 'AWT', 'Swing', 'Serializable'],
+		features: ['With Game level', 'High score'],
 	},
 	{
 		title: 'Photo Puzzle Game in Java',
 		live_link: 'Not Available',
 		source_code_link: 'https:/https://github.com/kom50/Puzzle-Game-in-java',
-		description:
-			'This project is created with the help of Java Swing and AWT.',
+		description: 'This project is created with the help of Java Swing and AWT.',
+		tech_stuff: ['Java', 'AWT', 'Swing'],
 		features: [],
+	},
+	{
+		title: 'Number Puzzle in Java',
+		live_link: 'Not available',
+		source_code_link: 'https://github.com/kom50/Number-Puzzle-Game-in-Java',
+		description: 'This project is created with the help of Java Swing and AWT.',
+		tech_stuff: ['Java', 'AWT', 'Swing'],
+		features: ['Infinite level'],
 	},
 	{
 		title: 'Library Management System Project in Java',
@@ -97,15 +138,7 @@ const projectDetails = [
 		source_code_link: 'Not available',
 		description:
 			'This project is created with the help of Java Swing, AWT and JDBC.',
-		features: [],
-	},
-
-	{
-		title: 'Number Puzzle in Java',
-		live_link: 'Not available',
-		source_code_link: 'Not available',
-		description:
-			'This project is created with the help of Java Swing, AWT.',
+		tech_stuff: ['Java', 'JDBC', 'AWT', 'Swing'],
 		features: [],
 	},
 ];

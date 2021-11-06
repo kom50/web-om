@@ -3,22 +3,66 @@ import myPic from './images/om.jpg';
 import BackButton from './BackButton';
 import './css/About.css';
 
-const About = () => {
-	const text = () => {
-		let label = document.querySelector('.text');
-		let d = 'I am a computer science student.'.split('');
+const skills = [
+	{
+		title: 'Programming Languages',
+		course: 'C, C++, Java, JavaScript',
+	},
+	{
+		title: 'Frontend Development',
+		course: 'HTML, CSS, BootStrap, jQuery, React.js',
+	},
+	{
+		title: 'Backend Development',
+		course: 'Node.js, Express js',
+	},
+	{
+		title: 'Database',
+		course: 'Basic Oracle SQL',
+	},
+	{
+		title: 'Cloud',
+		course: 'Basic Firebase Database',
+	},
+	{
+		title: 'Others',
+		course: 'Basic Git & Github',
+	},
+];
 
-		for (var i = 0; i < d.length; i++) {
-			(function (j) {
-				setTimeout(function delay() {
-					label.textContent += d[j];
-				}, j * 100);
-			})(i);
+const About = () => {
+	// const text = () => {
+	// 	let label = document.querySelector('.text');
+	// 	let d = 'I am a computer science student.'.split('');
+
+	// 	for (var i = 0; i < d.length; i++) {
+	// 		(function (j) {
+	// 			setTimeout(function delay() {
+	// 				label.textContent += d[j];
+	// 			}, j * 100);
+	// 		})(i);
+	// 	}
+	// };
+
+	const scrollHandler = () => {
+		if (document.documentElement.scrollTop > 20) {
+			if (document.querySelector('.about .back-btn'))
+				document.querySelector('.about .back-btn').style.cssText =
+					'box-shadow: 0px 10px 15px rgba(59, 57, 57, 0.5)';
+		} else {
+			if (document.querySelector('.about .back-btn'))
+				document.querySelector('.about .back-btn').style.cssText =
+					'box-shadow: 0';
 		}
 	};
 
 	React.useEffect(() => {
 		// text();
+		window.addEventListener('scroll', scrollHandler);
+		//
+		return () => {
+			window.removeEventListener('scroll', scrollHandler);
+		};
 	}, []);
 
 	return (
@@ -26,6 +70,7 @@ const About = () => {
 			<div className="container-fluid about">
 				<BackButton />
 				<div className="about-info">
+					<h4 className="about_text text"> About </h4>
 					<div className="img">
 						<div className="img-container">
 							<div className="back">
@@ -35,26 +80,42 @@ const About = () => {
 						</div>
 					</div>
 					<div className="info">
-						<p>I am a computer science student.</p>
+						<p>
+							I am a Computer science student. I am from Bihar.
+							And i had started my computer career in 2017 from
+							BCA. And i learned Computer concept and programming
+							languages. My first programming language was C. And
+							my favourite programming language is JavaScript and
+							React js library.
+						</p>
 					</div>
 				</div>
 				<div className="skills-info">
-					<p className="text"></p>
+					<h3 className="text">Skills</h3>
+
 					<ul>
-						<li className="skill">
-							<h5>Web Development</h5>
-							<p className="course">
-								HTML5, CSS, CSS3, JavaScript, React Js
-							</p>
-						</li>
-						<li className="skill"></li>
-						<li className="skill"></li>
-						<li className="skill"></li>
-						<li className="skill"></li>
+						{skills.map((skill, index) => {
+							return (
+								<Skill
+									key={index}
+									title={skill.title}
+									course={skill.course}
+								/>
+							);
+						})}
 					</ul>
 				</div>
 			</div>
 		</div>
+	);
+};
+
+const Skill = (props) => {
+	return (
+		<li className="skill">
+			<h5 className="skill_title">{props.title}</h5>
+			<p className="course">{props.course}</p>
+		</li>
 	);
 };
 

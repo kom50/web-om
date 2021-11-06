@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     /* font-variant: small-caps; */
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 root {
@@ -22,10 +23,9 @@ root {
 
 .container-fluid::after {
     content: '';
-    /*Alwayspositionvalueisabsolute*/
-    position: absolute;
+    position: fixed;
     width: 100%;
-    height: inherit;
+    height: 100%;
     top: 0;
     right: 0px;
     background-color: rgb(234, 0, 255);
@@ -45,9 +45,9 @@ root {
 .container-fluid::before {
     content: '';
     /* Always position value is absolute */
-    position: absolute;
+    position: fixed;
     width: inherit;
-    height: inherit;
+    height: 100%;
     top: 0;
     left: 0;
     background-color: rgb(100, 11, 128);

@@ -7,6 +7,8 @@ import './css/Project-style.css';
 import { projectDetails } from './projectData.js';
 import BackButton from './BackButton';
 
+let myHeader = null;
+
 const Project = () => {
 	const [isDialogBoxOpen, setDialogBoxOpen] = useState(false);
 	const [data, setData] = useState(projectDetails[0]);
@@ -20,27 +22,33 @@ const Project = () => {
 	};
 
 	const scrollUpdate = () => {
-		let header = document.querySelector('.header');
-		if (document.documentElement.scrollTop > 20) {
-			header.style.cssText = 'box-shadow: 0 4px 30px rgb(76, 75, 75);';
-		} else {
-			document.querySelector('.header').style.cssText = 'box-shadow: 0';
-			header.style.cssText = 'box-shadow: 0';
-		}
-		// for header My Project Text add on header panel or remove
-		let ele = document.querySelector('.std');
-		let langsPanel = document.querySelector('.langs');
+		if (myHeader) {
+			if (document.documentElement.scrollTop > 20) {
+				myHeader.style.cssText =
+					'box-shadow: 0 4px 30px rgb(76, 75, 75);';
+			} else {
+				myHeader.style.cssText = 'box-shadow: 0';
+			}
+			// for header My Project Text add on header panel or remove
+			let ele = document.querySelector('.std');
+			let langsPanel = document.querySelector('.langs');
 
-		if (document.documentElement.scrollTop > 192) {
-			ele.style.cssText = 'top : 25px';
-			header.appendChild(ele);
-			langsPanel.style.cssText = 'top : 160px';
-		} else {
-			ele.style.cssText = 'top : 105px';
-			langsPanel.style.cssText = 'top : 120px';
-			langsPanel.before(ele);
+			if (document.documentElement.scrollTop > 192) {
+				ele.style.cssText = 'top : 15px';
+				myHeader.style.cssText =
+					'box-shadow: 0 4px 30px rgb(76, 75, 75); height : 160px; flex-direction: column; align-items: center;';
+				langsPanel.style.cssText = 'top : 20px;';
+				myHeader.appendChild(ele);
+				myHeader.appendChild(langsPanel);
+				// langsPanel.style.cssText = 'top : 160px';
+			} else {
+				ele.style.cssText = 'top : 105px';
+				myHeader.style.cssText = 'height : 60px; ';
+				langsPanel.style.cssText = 'top : 120px';
+				document.querySelector('.container1').before(langsPanel);
+				langsPanel.before(ele);
+			}
 		}
-		// console.log(document.documentElement.scrollTop);
 	};
 
 	useEffect(() => {
@@ -87,13 +95,12 @@ const Project = () => {
 				<Dialog
 					data={data}
 					closeHandler={() => {
-						console.log('close', data);
 						setDialogBoxOpen(false);
 					}}
 				/>
 			)}
 			<div className="container-fluid project ">
-				<div className="header">
+				<div className="header" ref={(ele) => (myHeader = ele)}>
 					<BackButton />
 				</div>
 				<div className="img-container">
@@ -114,7 +121,7 @@ const Project = () => {
 						onClick={chooseHandle}
 						id="React Js"
 						className="items active">
-						React Js
+						React.js
 					</div>
 					<div
 						onClick={chooseHandle}
@@ -123,7 +130,23 @@ const Project = () => {
 						Java
 					</div>
 				</div>
-				<div className="container1 ">
+				<div className="container1  project_container row mx-auto">
+					{/* {arr.forEach((item) => {
+						console.log('object ---- ', item);
+						projectDetails
+							.filter((project) => project.title.includes(item))
+							.map((project, index) => {
+								console.log('object project ---- ', project);
+								return (
+									<Card
+										key={index}
+										index={index}
+										project={project}
+										handler={handleClick}
+									/>
+								);
+							});
+					})} */}
 					{projectDetails.map((project, index) => {
 						for (let i = 0; i < arr.length; i++) {
 							if (project.title.includes(arr[i])) {
@@ -159,104 +182,3 @@ const Card = (props) => {
 	);
 };
 export default Project;
-
-/* 
-					<div className="card">
-						<div className="card-header">Snake Game</div>
-						<div className="card-body">
-							<div className="card-title">Snake Game </div>
-							<ul>
-								<li>Item 1</li>
-								<li>Item 2</li>
-								<li>Item 3</li>
-								<li>Item 4</li>
-							</ul>
-						</div>
-						<div
-							className="card-footer bg-info"
-							onClick={handleClick}>
-							See More Details
-						</div>
-					</div>
-					<div className="card">
-						<div className="card-header">Snake Game</div>
-						<div className="card-body">
-							<div className="card-title">Snake Game </div>
-							<ul>
-								<li>Item 1</li>
-								<li>Item 2</li>
-								<li>Item 3</li>
-								<li>Item 4</li>
-							</ul>
-						</div>
-						<div
-							className="card-footer bg-info"
-							onClick={handleClick}>
-							See More Details
-						</div>
-					</div>
-					<div className="card">
-						<div className="card-header">Snake Game</div>
-						<div className="card-body">
-							<div className="card-title">Snake Game </div>
-							<ul>
-								<li>Item 1</li>
-								<li>Item 2</li>
-								<li>Item 3</li>
-								<li>Item 4</li>
-							</ul>
-						</div>
-						<div className="card-footer">See More Defails</div>
-					</div>
-					<div className="card">
-						<div className="card-header">Snake Game</div>
-						<div className="card-body">
-							<div className="card-title">Snake Game </div>
-							<ul>
-								<li>Item 1</li>
-								<li>Item 2</li>
-								<li>Item 3</li>
-								<li>Item 4</li>
-							</ul>
-						</div>
-						<div className="card-footer">See More Defails</div>
-					</div>
-					<div className="card">
-						<div className="card-header">Snake Game</div>
-						<div className="card-body">
-							<div className="card-title">Snake Game </div>
-							<ul>
-								<li>Item 1</li>
-								<li>Item 2</li>
-								<li>Item 3</li>
-								<li>Item 4</li>
-							</ul>
-						</div>
-						<div className="card-footer">See More Defails</div>
-					</div>
-					<div className="card">
-						<div className="card-header">Snake Game</div>
-						<div className="card-body">
-							<div className="card-title">Snake Game </div>
-							<ul>
-								<li>Item 1</li>
-								<li>Item 2</li>
-								<li>Item 3</li>
-								<li>Item 4</li>
-							</ul>
-						</div>
-						<div className="card-footer">See More Defails</div>
-					</div>
-					<div className="card">
-						<div className="card-header">Snake Game</div>
-						<div className="card-body">
-							<div className="card-title">Snake Game </div>
-							<ul>
-								<li>Item 1</li>
-								<li>Item 2</li>
-								<li>Item 3</li>
-								<li>Item 4</li>
-							</ul>
-						</div>
-						<div className="card-footer">See More Defails</div>
-					</div> */

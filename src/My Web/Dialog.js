@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './css/Dialog.module.css';
+import { GrFormClose } from 'react-icons/gr';
 // import './css/Dialog.css';
 
 const Dialog = (props) => {
@@ -9,14 +10,20 @@ const Dialog = (props) => {
 		live_link,
 		source_code_link: source_link,
 		features,
+		tech_stuff,
 	} = props.data;
 
 	return (
 		<div className={styles.dialog}>
-			<span onClick={props.closeHandler} className={styles.dialog_close}>
-				&times;{' '}
-			</span>
-			<div className={styles.dialog_header}> {title}</div>
+			<div className={styles.dialog_header}>
+				<span
+					onClick={props.closeHandler}
+					className={styles.dialog_close}>
+					<GrFormClose />
+					{/* &times;{' '} */}
+				</span>
+				<div className={styles.dialog_title}> {title}</div>
+			</div>
 			<div className={styles.dialog_body}>
 				<p className={styles.dialog_text}>{desc}</p>
 				<ul>
@@ -46,6 +53,15 @@ const Dialog = (props) => {
 						<span className={styles.heading}>Features</span>
 						{features.map((feature, index) => {
 							return <li key={index}>{feature}</li>;
+						})}
+					</ul>
+				)}
+				<br />
+				{tech_stuff.length !== 0 && (
+					<ul>
+						<span className={styles.heading}>Tech Stuff : </span>
+						{tech_stuff.map((tech, index) => {
+							return <li key={index}>{tech}</li>;
 						})}
 					</ul>
 				)}
