@@ -5,6 +5,7 @@ import Home from './Home';
 import './css/style.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+// Portfolio web
 const App = () => {
 	return (
 		<BrowserRouter>

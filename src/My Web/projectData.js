@@ -37,8 +37,8 @@ const projectDetails = [
 	},
 	{
 		title: 'Tic Tac Toe Game in HTML',
-		live_link: ' https://kom50.github.io/Photo-puzzle-game.github.io/',
-		source_code_link: 'https://github.com/kom50/Photo-puzzle-game.github.io',
+		live_link: ' https://kom50.github.io/tictactoegame.github.io/',
+		source_code_link: 'https://github.com/kom50/tictactoegame.github.io',
 		description:
 			'This project is created with the help of HTML, CSS and JavaScript.',
 		tech_stuff: ['HTML', 'CSS', 'JavaScript'],
@@ -97,6 +97,14 @@ const projectDetails = [
 			'Update story',
 			'Delete story',
 		],
+	},{
+		title: 'Weather App in React Js',
+		live_link: 'https://kom50.github.io/weather_app/',
+		source_code_link: 'https://github.com/kom50/weather_app',
+		description:
+			'This Project is created with the help of HTML, CSS and React Js.',
+		tech_stuff: ['HTML', 'CSS', 'React JS', 'Axios'],
+		features: ['Search Weather by city name'],
 	},
 	{
 		title: 'Notepad Application in Java',

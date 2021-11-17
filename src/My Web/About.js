@@ -14,7 +14,7 @@ const skills = [
 	},
 	{
 		title: 'Backend Development',
-		course: 'Node.js, Express js',
+		course: 'Node.js,',
 	},
 	{
 		title: 'Database',
@@ -22,7 +22,7 @@ const skills = [
 	},
 	{
 		title: 'Cloud',
-		course: 'Basic Firebase Database',
+		course: 'Basic Firebase real-time database',
 	},
 	{
 		title: 'Others',
