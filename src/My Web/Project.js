@@ -12,7 +12,7 @@ let myHeader = null;
 const Project = () => {
 	const [isDialogBoxOpen, setDialogBoxOpen] = useState(false);
 	const [data, setData] = useState(projectDetails[0]);
-	const [arr, setArray] = useState(['HTML', 'React Js', 'Java']);
+	const [arr, setArray] = useState(['HTML', 'React Js', 'MERN Stack', 'Java']);
 
 	//
 	const handleClick = (event) => {
@@ -24,8 +24,7 @@ const Project = () => {
 	const scrollUpdate = () => {
 		if (myHeader) {
 			if (document.documentElement.scrollTop > 20) {
-				myHeader.style.cssText =
-					'box-shadow: 0 4px 30px rgb(76, 75, 75);';
+				myHeader.style.cssText = 'box-shadow: 0 4px 30px rgb(76, 75, 75);';
 			} else {
 				myHeader.style.cssText = 'box-shadow: 0';
 			}
@@ -111,22 +110,16 @@ const Project = () => {
 				</div>
 				<h2 className="std">My Projects</h2>
 				<div className="langs">
-					<div
-						onClick={chooseHandle}
-						id="HTML"
-						className="items active">
+					<div onClick={chooseHandle} id="HTML" className="items active">
 						HTML
 					</div>
-					<div
-						onClick={chooseHandle}
-						id="React Js"
-						className="items active">
+					<div onClick={chooseHandle} id="React Js" className="items active">
 						React.js
 					</div>
-					<div
-						onClick={chooseHandle}
-						id="Java"
-						className="items active">
+					<div onClick={chooseHandle} id="MERN Stack" className="items active">
+						MERN
+					</div>
+					<div onClick={chooseHandle} id="Java" className="items active">
 						Java
 					</div>
 				</div>
@@ -170,7 +163,10 @@ const Project = () => {
 const Card = (props) => {
 	const project = props.project;
 	return (
-		<div className="card" id={props.index}>
+		<div
+			className="card"
+			id={props.index}
+			data-aos={props.index % 2 === 0 ? 'flip-right' : 'flip-left'}>
 			<div className="card-body">
 				<h4 className="card-title">{project.title} </h4>
 				<p className="card-text"> {project.description}</p>

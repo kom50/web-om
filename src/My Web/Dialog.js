@@ -16,9 +16,7 @@ const Dialog = (props) => {
 	return (
 		<div className={styles.dialog}>
 			<div className={styles.dialog_header}>
-				<span
-					onClick={props.closeHandler}
-					className={styles.dialog_close}>
+				<span onClick={props.closeHandler} className={styles.dialog_close}>
 					<GrFormClose />
 					{/* &times;{' '} */}
 				</span>
@@ -29,21 +27,13 @@ const Dialog = (props) => {
 				<ul>
 					<li>
 						<span className={styles.heading}>Live URL : </span>
-						<a
-							className={styles.a}
-							href={live_link}
-							target="_black">
+						<a className={styles.a} href={live_link} target="_black">
 							{live_link}
 						</a>
 					</li>
 					<li>
-						<span className={styles.heading}>
-							Source Code Link :{' '}
-						</span>
-						<a
-							className={styles.a}
-							href={source_link}
-							target="_black">
+						<span className={styles.heading}>Source Code Link : </span>
+						<a className={styles.a} href={source_link} target="_black">
 							{source_link}
 						</a>
 					</li>

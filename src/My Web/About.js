@@ -14,11 +14,11 @@ const skills = [
 	},
 	{
 		title: 'Backend Development',
-		course: 'Node.js,',
+		course: 'Node.js, ExpressJs',
 	},
 	{
 		title: 'Database',
-		course: 'Basic Oracle SQL',
+		course: 'Basic Oracle SQL, Basic MongoDB',
 	},
 	{
 		title: 'Cloud',
@@ -27,6 +27,10 @@ const skills = [
 	{
 		title: 'Others',
 		course: 'Basic Git & Github',
+	},
+	{
+		title: '',
+		course: '',
 	},
 ];
 
@@ -69,9 +73,9 @@ const About = () => {
 		<div className="about-page">
 			<div className="container-fluid about">
 				<BackButton />
-				<div className="about-info">
+				<div className="about-info" data-aos="fade-down">
 					<h4 className="about_text text"> About </h4>
-					<div className="img">
+					<div className="img" data-aos="flip-down">
 						<div className="img-container">
 							<div className="back">
 								<h2>Om prakash </h2>
@@ -80,27 +84,22 @@ const About = () => {
 						</div>
 					</div>
 					<div className="info">
-						<p>
-							I am a Computer science student. I am from Bihar.
-							And i had started my computer career in 2017 from
-							BCA. And i learned Computer concept and programming
-							languages. My first programming language was C. And
-							my favourite programming language is JavaScript and
-							React js library.
+						<p data-aos="zoom-in" data-aos-duration="2000">
+							I am a Computer science student. I am from Bihar. And i had
+							started my computer career in 2017 from BCA. And i learned
+							Computer concept and programming languages. My first programming
+							language was C. And my favourite programming language is
+							JavaScript and React js library.
 						</p>
 					</div>
 				</div>
-				<div className="skills-info">
+				<div className="skills-info" data-aos="fade-up">
 					<h3 className="text">Skills</h3>
 
 					<ul>
 						{skills.map((skill, index) => {
 							return (
-								<Skill
-									key={index}
-									title={skill.title}
-									course={skill.course}
-								/>
+								<Skill key={index} title={skill.title} course={skill.course} />
 							);
 						})}
 					</ul>
@@ -112,7 +111,7 @@ const About = () => {
 
 const Skill = (props) => {
 	return (
-		<li className="skill">
+		<li className="skill" data-aos="fade-up">
 			<h5 className="skill_title">{props.title}</h5>
 			<p className="course">{props.course}</p>
 		</li>

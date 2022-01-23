@@ -97,7 +97,9 @@ const projectDetails = [
 			'Update story',
 			'Delete story',
 		],
-	},{
+	},
+
+	{
 		title: 'Weather App in React Js',
 		live_link: 'https://kom50.github.io/weather_app/',
 		source_code_link: 'https://github.com/kom50/weather_app',
@@ -105,6 +107,30 @@ const projectDetails = [
 			'This Project is created with the help of HTML, CSS and React Js.',
 		tech_stuff: ['HTML', 'CSS', 'React JS', 'Axios'],
 		features: ['Search Weather by city name'],
+	},
+	{
+		title: 'Contact List App in MERN Stack',
+		live_link: 'https://contacts-app3.herokuapp.com/',
+		source_code_link: 'https://github.com/kom50/Contacts-app-project-in-MERN',
+		description: 'This Project is created with the help of MERN Stack Concept.',
+		tech_stuff: [
+			'HTML',
+			'CSS',
+			'React JS',
+			'React Router Dom',
+			'Axios',
+			'Node.js',
+			'ExpressJS',
+			'MongoDB',
+		],
+		features: [
+			'Create Account',
+			'Login features',
+			'Add contacts',
+			'Read contacts',
+			'Update contacts',
+			'Delete contacts',
+		],
 	},
 	{
 		title: 'Notepad Application in Java',
