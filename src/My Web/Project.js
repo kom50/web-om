@@ -108,8 +108,10 @@ const Project = () => {
 					</div>
 					<img src={myPic} alt="om" />
 				</div>
-				<h2 className="std">My Projects</h2>
-				<div className="langs">
+				<h2 className="std" data-aos="fade-up">
+					My Projects
+				</h2>
+				<div className="langs" data-aos="zoom-out">
 					<div onClick={chooseHandle} id="HTML" className="items active">
 						HTML
 					</div>

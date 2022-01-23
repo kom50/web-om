@@ -11,17 +11,19 @@ const Home = () => {
 				</div>
 				<img src={myPic} alt="om" />
 			</div>
-			<h2 className="std">Student | Developer(Fresher)</h2>
+			<h2 className="std" data-aos="flip-left">
+				Student | Developer(Fresher)
+			</h2>
 			<div className="main">
 				<div className="content">
-					<div className="items item1">
+					<div className="items item1" data-aos="fade-right">
 						<Link to="/project"> Projects </Link>
 					</div>
-					<div className="items item2">
+					<div className="items item2" data-aos="fade-left">
 						<Link to="/about"> About & Skills </Link>
 					</div>
-					<div className="items item3"></div>
-					<div className="items item4"></div>
+					<div className="items item3" data-aos="fade-right"></div>
+					<div className="items item4" data-aos="fade-left"></div>
 				</div>
 			</div>
 		</div>
