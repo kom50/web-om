@@ -3,18 +3,18 @@ import Project from './Project';
 import About from './About';
 import Home from './Home';
 import './css/style.css';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route, HashRouter } from 'react-router-dom';
 
 // Portfolio web
 const App = () => {
 	return (
-		<BrowserRouter>
+		<HashRouter>
 			<Switch>
 				<Route path="/" component={Home} exact />
 				<Route path="/project" component={Project} exact />
 				<Route path="/about" component={About} exact />
 			</Switch>
-		</BrowserRouter>
+		</HashRouter>
 	);
 };
 
