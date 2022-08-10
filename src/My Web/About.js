@@ -6,11 +6,11 @@ import './css/About.css';
 const skills = [
 	{
 		title: 'Programming Languages',
-		course: 'C, C++, Java, JavaScript',
+		course: 'C, C++, Java, JavaScript, TypeScript',
 	},
 	{
 		title: 'Frontend Development',
-		course: 'HTML, CSS, BootStrap, jQuery, React.js',
+		course: 'HTML, CSS, BootStrap, jQuery, React.js, Material UI, Vue.js, NuxtJS 3',
 	},
 	{
 		title: 'Backend Development',
@@ -18,15 +18,15 @@ const skills = [
 	},
 	{
 		title: 'Database',
-		course: 'Basic Oracle SQL, Basic MongoDB',
+		course: 'Basic Oracle SQL, MongoDB',
 	},
 	{
 		title: 'Cloud',
-		course: 'Basic Firebase real-time database',
+		course: 'Basic Firebase real-time database,vFirebase Authentication, and FireStore etc.',
 	},
 	{
 		title: 'Others',
-		course: 'Basic Git & Github',
+		course: 'Git & Github',
 	},
 	{
 		title: '',
@@ -35,19 +35,6 @@ const skills = [
 ];
 
 const About = () => {
-	// const text = () => {
-	// 	let label = document.querySelector('.text');
-	// 	let d = 'I am a computer science student.'.split('');
-
-	// 	for (var i = 0; i < d.length; i++) {
-	// 		(function (j) {
-	// 			setTimeout(function delay() {
-	// 				label.textContent += d[j];
-	// 			}, j * 100);
-	// 		})(i);
-	// 	}
-	// };
-
 	const scrollHandler = () => {
 		if (document.documentElement.scrollTop > 20) {
 			if (document.querySelector('.about .back-btn'))
@@ -61,9 +48,7 @@ const About = () => {
 	};
 
 	React.useEffect(() => {
-		// text();
 		window.addEventListener('scroll', scrollHandler);
-		//
 		return () => {
 			window.removeEventListener('scroll', scrollHandler);
 		};
@@ -88,7 +73,7 @@ const About = () => {
 							I am a Computer science student. I am from Bihar. And i had
 							started my computer career in 2017 from BCA. And i learned
 							Computer concept and programming languages. My first programming
-							language was C. And my favourite programming language is
+							language was C. And my favorite programming language is
 							JavaScript and React js library.
 						</p>
 					</div>

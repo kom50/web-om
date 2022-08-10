@@ -71,7 +71,7 @@ root {
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
     position: relative;
-    top: 50px;
+    top: 140px;
 }
 
 .img-container img {
@@ -133,7 +133,7 @@ root {
 .std {
     color: white;
     position: relative;
-    /* top: 10px; */
+    top: -210px;
 }
 
 

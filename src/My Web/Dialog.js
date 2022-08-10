@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './css/Dialog.module.css';
 import { GrFormClose } from 'react-icons/gr';
-// import './css/Dialog.css';
 
 const Dialog = (props) => {
 	const {
@@ -18,7 +17,6 @@ const Dialog = (props) => {
 			<div className={styles.dialog_header}>
 				<span onClick={props.closeHandler} className={styles.dialog_close}>
 					<GrFormClose />
-					{/* &times;{' '} */}
 				</span>
 				<div className={styles.dialog_title}> {title}</div>
 			</div>
@@ -58,11 +56,6 @@ const Dialog = (props) => {
 			</div>
 			<div className={styles.dialog_footer}>Happy Coding (^ . ^)</div>
 		</div>
-		// <div className="card">
-		// 	<div className="card-header"></div>
-		// 	<div className="card-body"></div>da
-		// 	<div className="card-header"></div>
-		// </div>
 	);
 };
 

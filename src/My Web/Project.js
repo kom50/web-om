@@ -12,11 +12,10 @@ let myHeader = null;
 const Project = () => {
 	const [isDialogBoxOpen, setDialogBoxOpen] = useState(false);
 	const [data, setData] = useState(projectDetails[0]);
-	const [arr, setArray] = useState(['HTML', 'React Js', 'MERN Stack', 'Java']);
+	const [arr, setArray] = useState(['HTML', 'React Js', 'Vue Js', 'MERN Stack', 'Java']);
 
 	//
 	const handleClick = (event) => {
-		console.log('Click event');
 		setDialogBoxOpen(true);
 		setData(projectDetails[event.target.parentElement.id]);
 	};
@@ -51,7 +50,6 @@ const Project = () => {
 	};
 
 	useEffect(() => {
-		console.log('use effect');
 		window.addEventListener('scroll', scrollUpdate, true);
 		// Clean up
 		return () => {
@@ -59,13 +57,10 @@ const Project = () => {
 		};
 	}, []);
 
-	useEffect(() => {
-		console.log('array updated effect function', arr);
-	}, [arr]);
+
 
 	// language
 	const chooseHandle = (event) => {
-		console.log(event.target);
 		let selected = 0;
 		const ch = event.target.parentElement.children;
 		for (let i = 0; i < ch.length; i++) {
@@ -73,19 +68,15 @@ const Project = () => {
 				selected++;
 			}
 		}
-		console.log(selected);
 		// at least one language is selected, and if the target element is not have a active class then below condition is true
 		if (selected > 1 || !event.target.classList.value.includes('active'))
-			var b = event.target.classList.toggle('active');
-		console.log(b);
-
+			event.target.classList.toggle('active');
 		arr.length = 0; // remove all data from array
 		for (let i = 0; i < ch.length; i++) {
 			if (ch[i].classList.value.includes('active')) {
 				setArray((arr) => [...arr, ch[i].id]);
 			}
 		}
-		console.log(arr);
 	};
 
 	return (
@@ -98,7 +89,7 @@ const Project = () => {
 					}}
 				/>
 			)}
-			<div className="container-fluid project ">
+			<div className="container-fluid project">
 				<div className="header" ref={(ele) => (myHeader = ele)}>
 					<BackButton />
 				</div>
@@ -118,6 +109,9 @@ const Project = () => {
 					<div onClick={chooseHandle} id="React Js" className="items active">
 						React.js
 					</div>
+					<div onClick={chooseHandle} id="Vue Js" className="items active">
+						Vue.js
+					</div>
 					<div onClick={chooseHandle} id="MERN Stack" className="items active">
 						MERN
 					</div>
@@ -126,22 +120,6 @@ const Project = () => {
 					</div>
 				</div>
 				<div className="container1  project_container row mx-auto">
-					{/* {arr.forEach((item) => {
-						console.log('object ---- ', item);
-						projectDetails
-							.filter((project) => project.title.includes(item))
-							.map((project, index) => {
-								console.log('object project ---- ', project);
-								return (
-									<Card
-										key={index}
-										index={index}
-										project={project}
-										handler={handleClick}
-									/>
-								);
-							});
-					})} */}
 					{projectDetails.map((project, index) => {
 						for (let i = 0; i < arr.length; i++) {
 							if (project.title.includes(arr[i])) {

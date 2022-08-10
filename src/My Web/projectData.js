@@ -98,7 +98,6 @@ const projectDetails = [
 			'Delete story',
 		],
 	},
-
 	{
 		title: 'Weather App in React Js',
 		live_link: 'https://kom50.github.io/weather_app/',
@@ -131,6 +130,22 @@ const projectDetails = [
 			'Update contacts',
 			'Delete contacts',
 		],
+	},
+	{
+		title: "Simple Camera app in HTML",
+		live_link: 'https://kom50.github.io/camera-app/',
+		source_code_link: 'https://github.com/kom50/camera-app',
+		description: "This web application is created using Typescript.",
+		tech_stuff: ['HTML', 'CSS', 'TypeScript'],
+		features: ['Change camera front to back', 'Take picture'],
+	},
+	{
+		title: "Social diary app in Vue Js",
+		live_link: 'https://social-diary1.web.app/',
+		source_code_link: 'https://github.com/kom50/social-diary-vue',
+		description: "This web application is created using VueJS.",
+		tech_stuff: ['HTML', 'CSS', 'VueJS'],
+		features: ['Create Post', 'See all your post'],
 	},
 	{
 		title: 'Notepad Application in Java',

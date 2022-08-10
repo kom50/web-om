@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { RiArrowGoBackFill } from 'react-icons/ri';
 import { IoReturnUpBack } from 'react-icons/io5';
-// import { MdArrowBack } from 'react-icons/md';
 
 import { createUseStyles } from 'react-jss';
 // hooks react jss

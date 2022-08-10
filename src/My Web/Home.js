@@ -12,7 +12,7 @@ const Home = () => {
 				<img src={myPic} alt="om" />
 			</div>
 			<h2 className="std" data-aos="flip-left">
-				Student | Developer(Fresher)
+				Front End Developer | Student
 			</h2>
 			<div className="main">
 				<div className="content">
@@ -22,8 +22,6 @@ const Home = () => {
 					<div className="items item2" data-aos="fade-left">
 						<Link to="/about"> About & Skills </Link>
 					</div>
-					<div className="items item3" data-aos="fade-right"></div>
-					<div className="items item4" data-aos="fade-left"></div>
 				</div>
 			</div>
 		</div>
