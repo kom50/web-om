@@ -128,6 +128,7 @@
         -ms-transform: scale(0);
         -o-transform: scale(0);
     }
+
     to {
         transform: scale(1);
         -webkit-transform: scale(1);
@@ -225,10 +226,14 @@ clip-path: polygon(0 64%, 0% 0%, 100% 100%, 0% 100%);
 /* Back button */
 
 .back-btn {
+    width: 100%;
+    height: 60px;
     position: absolute;
     left: 0px;
-    top: 10px;
+    top: 0px;
     font-size: 30px;
+    /* box-shadow: 1px -1px 10px rgb(59 57 57 / 50%); */
+
 }
 
 @media screen and (max-width: 350px) {
@@ -237,28 +242,33 @@ clip-path: polygon(0 64%, 0% 0%, 100% 100%, 0% 100%);
         align-items: flex-start;
         padding-left: 0;
     }
+
     .card {
         width: 300px;
     }
 }
 
 @media screen and (min-width: 200px) {
+
     /* width */
     ::-webkit-scrollbar {
         width: 4px;
     }
+
     /* Track */
     ::-webkit-scrollbar-track {
         /* background: #f1f1f1; */
         background: transparent;
         background: rgba(81, 148, 95, 0.3);
     }
+
     /* Handle */
     ::-webkit-scrollbar-thumb {
         /* background-image: linear-gradient(to bottom, red 70%, rgb(49, 2, 255) 30%); */
         background: rgba(153, 153, 153, 0.918);
         background: rgba(103, 207, 126, 1);
     }
+
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
         /* background: #555; */

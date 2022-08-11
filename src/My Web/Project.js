@@ -4,8 +4,8 @@ import Dialog from './Dialog';
 import './css/style.css';
 import './css/Project-style.css';
 
-import { projectDetails } from './projectData.js';
 import BackButton from './BackButton';
+import projectDetails from './data.json'
 
 let myHeader = null;
 
@@ -120,6 +120,7 @@ const Project = () => {
 					</div>
 				</div>
 				<div className="container1  project_container row mx-auto">
+					{/* eslint-disable-next-line array-callback-return */}
 					{projectDetails.map((project, index) => {
 						for (let i = 0; i < arr.length; i++) {
 							if (project.title.includes(arr[i])) {
