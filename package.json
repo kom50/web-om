@@ -2,7 +2,7 @@
     "name": "my-app",
     "version": "1.1.0",
     "private": true,
-    "homepage": "https://kom50.github.io/web-om/",
+    "homepage": "https://kom50.github.io/web-om",
     "dependencies": {
         "@popperjs/core": "^2.11.5",
         "@testing-library/jest-dom": "^5.14.1",
