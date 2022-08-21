@@ -1,8 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import myPic from './images/om.jpg';
 import { Link } from 'react-router-dom';
+import './css/pwaInstall.css'
 
 const Home = () => {
+	const [isShow, setShow] = useState(false)
+	const [installEvent, setInstallEvent] = useState({})
+
+	useEffect(() => {
+		window.addEventListener('beforeinstallprompt', (event) => {
+			event.preventDefault()
+			console.log('object', event);
+			setInstallEvent(event)
+			setShow(true)
+		})
+	}, [])
+
+	function dismissPrompt() {
+		setShow(false)
+	}
+	function installHandler() {
+		installEvent.prompt();
+		installEvent.userChoice.then((choice) => {
+			dismissPrompt()
+			if (choice.outcome === 'accepted') {
+				console.log('App installing')
+			} else {
+				console.log('App not install')
+			}
+		})
+
+
+	}
 	return (
 		<div className="container-fluid">
 			<div className="img-container">
@@ -24,6 +53,10 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
+			{isShow && <div className="install">
+				<button onClick={dismissPrompt}>Not now</button>
+				<button onClick={installHandler}>Install App</button>
+			</div>}
 		</div>
 	);
 };

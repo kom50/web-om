@@ -1,0 +1,40 @@
+.install {
+    width: 230px;
+    height: 60px;
+    background-color: #3740ff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.install button {
+    outline: none;
+    border: none;
+    padding: 6px;
+    /* border-radius: 5px; */
+    color: white;
+    font-weight: bold;
+}
+
+.install button:first-child {
+    color: rgb(211, 211, 211);
+    background-color: #3740ff;
+}
+
+.install button:last-child {
+    /* background-color: gray; */
+    background-color: white;
+    color: #3740ff;
+    border-radius: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.install button:last-child:hover {
+    /* background-color: rgb(113, 112, 112); */
+
+}

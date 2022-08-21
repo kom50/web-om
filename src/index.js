@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import App from './My Web/App';
+import sw from './swDev'
 
 // add
 import AOS from 'aos';
@@ -28,3 +29,5 @@ AOS.init({
 });
 
 ReactDOM.render(<App />, document.getElementById('root'));
+
+sw()
