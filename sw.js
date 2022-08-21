@@ -6,7 +6,6 @@ const caching_files = [
     './static/js/main.chunk.js',
     './static/media/om.ba8dc23e.jpg',
     './index.html',
-    './web-om/#/',
     './favicon.ico',
     './manifest.json',
     './img/icons/om-32x32.png',
